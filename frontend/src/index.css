@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --bg: hsl(0, 0%, 7%);
+  --fg: rgb(240, 240, 240);
+  --accent: #3B82F6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'inter';
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+
+  width: 100vw;
+  height: 80px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+}
+
+.navbar button {
+  background-color: transparent;
+  border: none;
+  color: var(--fg);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  position: absolute;
+
+  right: 50px;
+}
+
+
+.navbar a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0px 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  background-color: #3b83f617;
+  border: 1px solid var(--accent);
+
+  padding: 8px 16px;
+  border-radius: 6px;
+
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  background-color: transparent;
+}
+
+.mainSection {
+  flex-grow: 1;
+
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.tagline {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.description {
+  color: gray;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.formats {
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.privacyNote {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.privacyNote {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.fileUploader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  width: 400px;
+  height: 250px;
+  background-color: hsla(217, 91%, 60%, 0.05);
+  border: 2px dashed #3B82F6;
+
+  border-radius: 8px;
+  cursor: pointer;
+  color: gray;
+
+  gap: 15px;
+  font-weight: 600;
+}
+
+.fileUploader:has(input:disabled) {
+  cursor: default;
+}
+
+.fileUploader h2 {
+  font-size: 16px;
+  margin: 0;
+  max-width: 350px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.startBtn {
+  background-color: var(--accent);
+  border: 1px solid transparent;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 30px;
+  width: 400px;
+
+  border-radius: 6px;
+
+  margin-top: 50px;
+  cursor: pointer;
+
+  color: var(--bg);
+  transition: background-color, color 0.2s ease;
+}
+
+.startBtn:disabled {
+  background-color: #1e293b;
+  color: #475569;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.startBtn:hover {
+  background-color: #2563eb;
+}
+
+.errorMsg {
+  margin-top: 50px;
+  color: rgba(230, 57, 57, 0.843);
+}
+
+.removeFileBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  color: rgba(230, 57, 57, 0.843);
+  font-weight: 1000;
+  border: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  border: 1px solid rgba(230, 57, 57, 0.843);
+
+  transition: background-color 0.3s ease-in-out;
+}
+
+.removeFileBtn:hover {
+  background-color: rgba(230, 57, 57, 0.105);
+}
+
+/* Loader */
+.jobStatusMain {
+  width: 400px;
+  height: 200px;
+  background-color: hsla(217, 91%, 60%, 0.05);
+  border: 2px dashed #3B82F6;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 600;
+  color: gray;
+}
+
+.loaderMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  display: inline-block;
+  width: 3px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 10px;
+  animation: scale-up4 1s linear infinite;
+}
+
+.bar:nth-child(2) {
+  height: 35px;
+  margin: 0 5px;
+  animation-delay: .25s;
+}
+
+.bar:nth-child(3) {
+  animation-delay: .5s;
+}
+
+@keyframes scale-up4 {
+  20% {
+    background-color: #ffff;
+    transform: scaleY(1.5);
+  }
+
+  40% {
+    transform: scaleY(1);
+  }
+}
+
+/* Failed */
+.failedMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  color: rgba(230, 57, 57, 0.843);
+}
+
+/* Done */
+.doneMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  color: rgb(42, 183, 42);
+}
+
+.downloadBtn {
+  padding: 8px 16px;
+  margin: 0px;
+
+  font-size: 14px;
+  font-weight: 500;
+  background-color: rgb(42, 183, 42);
+  border: 1px solid transparent;
+  border-radius: 6px;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  text-decoration: none;
+  color: var(--bg);
+
+}
+
+.downloadBtn:hover {
+  background-color: transparent;
+  color: rgb(42, 183, 42);
+  border-color: rgb(42, 183, 42);
+}
+
+.done {
+  border-color: rgb(42, 183, 42);
+  background-color: rgb(42, 183, 42, 0.05);
+}
+
+.failed {
+  background-color: rgba(230, 57, 57, 0.05);
+  border-color: rgba(230, 57, 57, 0.843);
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .tagline {
+    font-size: 22px;
+    padding: 0 20px;
+  }
+
+  .description,
+  .formats,
+  .privacyNote {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  .fileUploader,
+  .startBtn,
+  .jobStatusMain {
+    width: 90vw;
+    max-width: 400px;
+  }
+
+  .fileUploader h2 {
+    max-width: 80vw;
+  }
+}
