@@ -107,7 +107,7 @@ export default function App() {
 
         <div className="action">
 
-          <a href=""><Link size={16} />View on GitHub</a>
+          <a href="https://github.com/CrowSage/neosub" target="_"><Link size={16} />View on GitHub</a>
           {/* <button className="themeChangeBtn"><Sun strokeWidth={1} size={30} /></button> */}
         </div>
       </header>
